@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "Deeknows",
+    "password": null,
+    "database": "winning_eleven",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "Deeknows",
+    "password": null,
+    "database": "winning_eleven",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "Deeknows",
+    "password": null,
+    "database": "winning_eleven",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
