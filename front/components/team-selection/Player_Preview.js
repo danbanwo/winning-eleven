@@ -25,7 +25,7 @@ class PlayerPreview extends Component {
         <td key={idx + '-' + stat.played}>{stat.played}</td>
         <td key={idx + '-' + stat.game}>{stat.game}</td>
         <td key={idx + '-' + stat.salary}>{stat.salary}</td>
-        <td key={idx + 'btn'}><button className='btn btn-success'>+</button></td>
+        <td key={idx + 'btn'}><button className='btn btn-success' style={{borderRadius: '100%'}}>+</button></td>
       </tr>
     ))
   }
