@@ -11,12 +11,20 @@ class TeamSelection extends Component {
     return (
       <div className='team-selection'>
         Hello from the Team Selection Page!
+        
         <GameFilter />
-        <PlayerSearch />
-        <PlayerFilter />
-        <PlayerList />
-        <AddPlayer />
-        <PlayerPreview />
+
+        <div className='team-selection-left'>
+          <PlayerFilter />
+          <PlayerSearch />
+          <PlayerList />
+          <PlayerPreview />
+        </div>
+
+        <div className='team-selection-right'>
+          <AddPlayer />
+        </div>
+
       </div>
     )
   }

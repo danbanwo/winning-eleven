@@ -46,4 +46,13 @@ describe('TeamSelection', () => {
     expect(component.find('.player-preview')).to.exist
   })
 
+  //should contain class name for team selection left
+  it('should contain class name for team-selection-left', () => {
+    expect(component.find('.team-selection-left')).to.exist
+  })
+
+  //should contain class name for team selection right
+  it('should contain class name for team-selection-right', () => {
+    expect(component.find('.team-selection-right')).to.exist
+  })
 });
