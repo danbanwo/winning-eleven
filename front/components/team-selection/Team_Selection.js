@@ -3,7 +3,7 @@ import GameFilter from './Game_filter';
 import PlayerSearch from './Player_Search';
 import PlayerFilter from './Player_Filter';
 import PlayerList from './Player_List';
-import AddPlayer from './Add_Player';
+import LineUp from './Line_Up';
 
 class TeamSelection extends Component {
   render() {
@@ -20,7 +20,7 @@ class TeamSelection extends Component {
         </div>
 
         <div className='team-selection-right'>
-          <AddPlayer />
+          <LineUp />
         </div>
 
       </div>
