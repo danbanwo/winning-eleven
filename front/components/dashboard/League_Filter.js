@@ -5,8 +5,8 @@ import { Link } from 'react-router';
 import ContestFilter from './Contest-Filter';
 
 /*
-The plan is for each league filter should filter content displayed on the
-dashboard. A tags should be converted to React-router Link components,
+The plan is for each league filter to filter content displayed on the
+dashboard. 'A' tags should be converted to React-router Link components,
 and each pill should have finer filter links.
 Each pill also filters the fixture list by League/Tournament
 */
