@@ -4,21 +4,19 @@ import PlayerSearch from './Player_Search';
 import PlayerFilter from './Player_Filter';
 import PlayerList from './Player_List';
 import AddPlayer from './Add_Player';
-import PlayerPreview from './Player_Preview';
 
 class TeamSelection extends Component {
   render() {
     return (
       <div className='team-selection'>
         Hello from the Team Selection Page!
-        
+
         <GameFilter />
 
         <div className='team-selection-left'>
           <PlayerFilter />
           <PlayerSearch />
           <PlayerList />
-          <PlayerPreview />
         </div>
 
         <div className='team-selection-right'>
