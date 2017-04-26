@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
 
 class PlayerSearch extends Component {
+  constructor() {
+    super();
+    this.state = { search: ''}
+  }
+
+  handleChange = (e) => {
+    this.setState({search: e.target.value})
+  }
+
   render() {
     return (
       <div className='player-search'>
-        Hello from the Player Search Component
+        <input onChange={this.handleChange} type='text' placeholder='Search for player' value={this.state.search}/>
       </div>
     )
   }
