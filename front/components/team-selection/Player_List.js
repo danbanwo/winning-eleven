@@ -21,7 +21,7 @@ class PlayerList extends Component {
     return (
       <div className='player-list' style={{width: '45vw'}}>
 
-        <table className="table table-striped" style={{width: '100%'}}>
+        <table className="table table-striped table-hover" style={{width: '100%'}}>
 
           <thead>
             <tr>

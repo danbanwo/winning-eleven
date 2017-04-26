@@ -13,15 +13,24 @@ class TeamSelection extends Component {
 
         <GameFilter />
 
-        <div className='team-selection-left'>
-          <PlayerFilter />
-          <PlayerSearch />
-          <PlayerList />
-        </div>
+          <div className='team-selection-body' style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
 
-        <div className='team-selection-right'>
-          <LineUp />
-        </div>
+            <div className='team-selection-left'>
+
+              <div className='team-filter-search' style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
+                <PlayerFilter />
+                <PlayerSearch />
+              </div>
+
+
+              <PlayerList />
+            </div>
+
+            <div className='team-selection-right'>
+              <LineUp />
+            </div>
+
+          </div>
 
       </div>
     )

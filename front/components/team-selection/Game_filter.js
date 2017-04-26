@@ -30,8 +30,7 @@ class GameFilter extends Component {
 
   render() {
     return (
-      <div className='game-filter'>
-        Hello from the Game Filter!
+      <div className='game-filter' style={{borderTop: 'solid black 1px', borderBottom: 'solid black 1px', marginBottom: '100px', marginTop: '120px'}}>
 
         {/* <!-- Nav tabs --> */}
         <div style={{display: 'flex', justifyContent: 'space-between'}}>
