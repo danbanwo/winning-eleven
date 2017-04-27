@@ -4,6 +4,10 @@ import TeamSelection from '../../../front/components/team-selection/Team_Selecti
 describe('TeamSelection', () => {
   let component;
 
+  let classNames = ['game-filter', 'player-search', 'player-filter', 'player-list', 'line-up', 'player-preview', 'team-selection-left', 'team-selection-right', 'team-selection-header', 'team-selection-body', 'team-filter-search', 'team-contest-details', 'contest-details', 'countdown'];
+
+  let htmlTags = ['h4', 'h5'];
+
   beforeEach(() => {
     component = renderComponent(TeamSelection);
   })
@@ -12,47 +16,43 @@ describe('TeamSelection', () => {
     expect(component).to.have.class('team-selection')
   });
 
-  it('should contain text "Hello from the Team Selection Page!"', () => {
-    expect(component).to.contain('Hello from the Team Selection Page!')
+  it('should contain text "Name of the contest ($11,000 to 1st)"', () => {
+    expect(component).to.contain('Name of the contest ($11,000 to 1st)')
   });
 
-  // should contain class name for game-filter component
-  it('should contain class name for game-filter', () => {
-    expect(component.find('.game-filter')).to.exist
-  })
+  // should contain each class name in the classNames array above
+  classNames.forEach(className => {
+    it(`should contain class name for "${className}"`, () => {
+      expect(component.find(`.${className}`)).to.exist
+    });
+  });
 
-  // shoudld contain class name for player search component
-  it('should contain class name for player-search', () => {
-    expect(component.find('.player-search')).to.exist
-  })
+  it('should have four "contest-details" classNames', () => {
+    expect(component.find('.contest-details').length).to.equal(4)
+  });
 
-  // should containe class name for player filter component
-  it('should contain class name for player-filter', () => {
-    expect(component.find('.player-filter')).to.exist
-  })
+/* To test elements within the class "team-contest-details" which is contained in the TeamSelection component
+*/
+  describe('CLASS: team-contest-details', () => {
+    let component;
+    let details = ['contest type', 'entries', 'entry fee', 'prizes'];
 
-  // should contain class name for player list component
-  it('should contain class name for player-list', () => {
-    expect(component.find('.player-list')).to.exist
-  })
+    beforeEach(() => {
+      component = renderComponent(TeamSelection).find('.team-contest-details')
+    });
 
-  // should contain class name for add player component
-  it('should contain class name for add-player', () => {
-    expect(component.find('.add-player')).to.exist
-  })
+    htmlTags.forEach(tag => {
+      it(`should have four ${tag} tags`, () => {
+        expect(component.find(tag).length).to.equal(4);
+      });
+    });
 
-  // should contain class name for player preview component
-  it('should contain class name for player-preview', () => {
-    expect(component.find('.player-preview')).to.exist
-  })
+    details.forEach(detail => {
+      it(`should contain "${detail}" text`, () => {
+        expect(component).to.contain(detail)
+      });
+    });
+  });
+  /* Nested describe ends above*/
 
-  //should contain class name for team selection left
-  it('should contain class name for team-selection-left', () => {
-    expect(component.find('.team-selection-left')).to.exist
-  })
-
-  //should contain class name for team selection right
-  it('should contain class name for team-selection-right', () => {
-    expect(component.find('.team-selection-right')).to.exist
-  })
 });

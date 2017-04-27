@@ -32,14 +32,14 @@ describe('Navbar', () => {
     let component;
 
     // the below array represent all the links in the navbar post-login
-    let links = ['Winning Eleven','Lobby', 'Upcoming', 'Live', 'History', 'Friends', 'Log out']
+    let links = ['Winning Eleven','Lobby', 'Upcoming', 'Live', 'History', 'Friends', 'Add Funds']
 
     beforeEach(() => {
       component = renderComponent(Navbar, {pathname: '/dashboard'})
     })
 
     it('should have six "LI" tags', () => {
-      expect(component.find('a').length).to.equal(7)
+      expect(component.find('li').length).to.equal(9)
     })
 
     it('should have a class named "navbar-right"', () => {
