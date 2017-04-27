@@ -29,8 +29,18 @@ class Navbar extends Component {
           <li><a href="#">Friends</a></li>
         </ul>
 
-        <ul className="nav navbar-nav navbar-right">
-          <li><a href="#">Log out</a></li>
+        <ul className="nav navbar-nav navbar-right" style={{display: 'flex', flexDirection: 'row'}}>
+          <li>
+            <button className='btn btn-success' style={{borderRadius: '100%'}}>1</button>
+          </li>
+          <li>
+            <button className='btn btn-success' style={{borderRadius: '100%'}}>2</button>
+          </li>
+          <li>
+            <button className='btn btn-success' style={{borderRadius: '100%'}}>3</button>
+          </li>
+
+          <li><button href="#" className='btn btn-success'>Add Funds</button></li>
         </ul>
       </div>
     )
