@@ -1,12 +1,12 @@
-const _defaultState = {};
+const _defaultState = {isLoggedIn: false, error: {hasError: false, message: ''}};
 
-const userReducer = (state = _defaultState, action) => {
+const authReducer = (state = _defaultState, action) => {
 	switch(action.type){
 		case "USER_LOGIN" :
 			return {...state, ...action.data}
 			break;
 		case "USER_SIGNUP":
-			return action.data
+			return {...state, ...action.data}
 			break;
 		case "USER_LOGOUT":
 			return action
@@ -17,4 +17,4 @@ const userReducer = (state = _defaultState, action) => {
 }
 
 
-export default userReducer;
+export default authReducer;
