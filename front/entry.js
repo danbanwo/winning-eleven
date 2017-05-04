@@ -8,7 +8,6 @@ import store from './store/store';
 // import the routes folder
 import Routes from './routes/routes';
 
-/* global document:true */
 render(
   <Provider store={store}>
     <Routes />
